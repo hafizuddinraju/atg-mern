@@ -1,8 +1,7 @@
 //user info set database
 export const saveUserMongodb = (username, email) => {
- 
   const user = { username, email };
-  fetch("http://localhost:5000/signup", {
+  fetch("https://server-atg-mern.vercel.app/signup", {
     method: "PUT",
     headers: {
       "content-type": "application/json",
