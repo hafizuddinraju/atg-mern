@@ -28,7 +28,7 @@ const AllPost = ({post, handleDeletePost,refetch}) => {
                     <ul  className="p-2 shadow bg-gray-200 flex justify-between w-40">
                         <li>
                             <label htmlFor="edit-modal" className=''>
-                               <TbEdit onClick={()=>setModal(post)} ></TbEdit>
+                               <TbEdit className='cursor-pointer' onClick={()=>setModal(post)} ></TbEdit>
                             </label>
                         </li>
                         <li>

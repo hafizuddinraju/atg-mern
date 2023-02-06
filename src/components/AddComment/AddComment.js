@@ -14,7 +14,6 @@ const AddComment = ({ post }) => {
     event.preventDefault();
     const comment = event.target;
     const comments = comment.commentContent.value;
-    console.log(comments);
     const commentAdd = {
       post_Id: post?._id,
       comment_email: user?.email,
@@ -43,7 +42,7 @@ const AddComment = ({ post }) => {
       .then((result) => {
         setDataPost(result.data);
         setLoading(false);
-        console.log(result.data);
+        
       });
   }, [post?._id, loading]);
 

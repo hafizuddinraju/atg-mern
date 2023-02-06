@@ -32,7 +32,7 @@ const Login = () => {
     setLoginData(values.email)
     UserLogin(values.email, values.password)
     .then(result =>{
-      console.log(result)
+      
       navigate('/post')
     })
     .catch(error =>{
@@ -52,7 +52,7 @@ const Login = () => {
 
   }
   const handleForgetPasswordData = ()=>{
-    console.log(loginData)
+    
     if(!loginData){
       alert('Please enter your email')
       return;
@@ -62,7 +62,7 @@ const Login = () => {
       alert('password reset Link send your email. Please check it!!')
   })
   .catch(error =>{
-      console.log(error);
+      toast.error(error.message,{autoClose:1000})
   })
 
   }
